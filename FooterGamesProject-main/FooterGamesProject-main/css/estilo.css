@@ -1,0 +1,382 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(45deg, #040d12, #183d3d, #5C8374);
+    font-family: Arial, Helvetica;
+}
+
+
+/*Header y nav*/
+
+/* Esto es para que cada elemento de la lista quede una al lado de la otra */
+ul{
+    display: flex;
+}
+
+/* con list-style-type: none eliminamos los puntos que les agrega por defecto*/
+li{
+    list-style-type: none;
+    margin: 0.5rem;
+}
+
+/* Contenido de la etiqueta a (hipervinculos) */
+a{
+    display: flex;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #93B1A6;
+    cursor:pointer;
+    transition: 1s;
+}
+
+/* le damos sombreado al texto que contiene la etiqueta a */
+a:hover{
+    text-shadow:0 0 5px #00fff7;
+    color: #00fff7;
+    /* traslada el contenido de a 20px en el eje X y 10px en el eje Y */
+    /* transform: translate(20px, 10px);   */
+    /* transform:rotate(360deg); */
+}
+
+/* contenido flexbox, espaciado y centrado entre los elementos. que el nav ocupe el 15% */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #040d12;
+    align-items: center;
+    height: 15vh;
+}
+
+/* logo que ocupa ancho del 25% y alto del 45% del nav */
+#logo{
+    width: 25%;
+    height: 45%;
+    margin-left: 20px;
+    border-radius: 3px;
+    cursor:pointer;
+    transition: 1s;
+    border-radius: 25px;
+}
+
+#logo:hover{
+    border: 1px solid #00fff7;
+    box-shadow: 0 0 20px #00fff7;
+}
+
+input{
+    border-radius: 10px;
+    font-family:cursive;
+    background-color: #183d3d;
+    width: 20vw;
+    height: 3vh;
+}
+
+#buscar {
+    color: #fff;
+    background-color: black;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #040d12;
+    margin: 0.5rem;
+}
+#imagen-login:hover{
+    transform: scale(0.9);
+}
+
+#imagen-login{
+    width: 40px;
+    margin: 0.5rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Main */
+
+.search {
+    display: none;
+}
+
+ /* ancho del 65% de la pantalla, margen arriba y abajo de 20px */
+ /* auto fit es para que se adapte al tamaño del navegador */
+/* minmax(n) cuan grande o chico queres que sea la imagen */
+
+.grid-container-main{
+    width: 77%;
+    margin: 1.25rem auto;
+    display: grid;
+    /* la unidad de medida fraccion ocupa el 100% de de la pantalla */
+    /* grid-template-columns: repeat(autofit, minmax(350px,1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 300px 300px; */
+    gap: 20px;
+ }
+
+ .card{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    transform: scale(1);
+    transition: all 1s;
+    box-shadow: 5px 5px 6px black;
+    background: linear-gradient(90deg, #000018, #011f1f, #0d2134);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+ }
+
+ .card:hover{
+    transform: scale(1.1);   
+ }
+
+ .black{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    transform: scale(1);
+    cursor: pointer;
+    transition: all 0.5s;
+    color: transparent; 
+}
+
+ .black p{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+ }
+
+ .black:hover {
+    color: white;
+    background-color: rgba(10,10,10, 0.8);
+ }
+
+ .black h1{
+   margin-top: 10px;
+   color: transparent;
+   transition: all 0.5s;
+   text-align: center;
+ }
+
+ .black:hover h1{
+   color: white;
+ }
+
+
+ /* nos aseguramos que se ajuste a su contenedor */
+ .imagen{
+    width: 95%;
+    height: 95%;
+ }
+
+ .imagen img{
+    width: 100%;
+    height: 100%;
+ }
+
+ section{
+   background: linear-gradient(90deg, #000018, #011f1f, #0d2134);
+ }
+
+ section h1{
+   display: flex;
+   color: #93B1A6;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   justify-content: center;
+ }
+
+ .container-main2{
+   width: 77%;
+   margin: 0.6rem auto;
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   column-gap: 20px;
+   row-gap: 20px;
+}
+
+.descripcion-iframe{
+   display: flex;
+   color: white;
+   font-size: 1.25rem;
+   flex-direction: column;
+}
+
+.descripcion-iframe p {
+    margin: 0.4rem;
+}
+
+.iframe{
+   width: 100%;
+}
+
+.iframe iframe{
+   width: 100%;
+}
+
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+/* FOOTER que ocupa el 30% del navegador*/
+footer{
+    background-color: #040d12;
+    border: 1px solid transparent;
+}
+
+
+.line{
+    border-bottom: 1px solid #93B1A6;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+/* repetimos 3 columnas de 1fr(33%) */
+/* y 3 filas  */
+.grid-container-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1fr 3fr 1fr; */
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.grid-items ul{
+    display: inline-block;
+}
+
+.grid-items li{
+    margin: 0.31rem;
+}
+
+.grid-ancla img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.grid-ancla img:hover{
+    transform:translate(0px, -10px);
+}
+
+/* que el texto ocupe el ancho de todas las columnas */
+.grid-text{
+    color: #93B1A6;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 10px;
+}
+
+
+/* espacio entre los iconos */
+.grid-icon{
+    display: inline-block;
+    margin: 10px;
+
+}
+
+.titulos{
+    color: #93B1A6;
+}
+
+
+
+
+
+/* web responsive-------------------------------------------------------- */
+/* tablet */
+@media (max-width: 768px) {
+    .grid-container-main{
+     grid-template-columns: repeat(2,1fr);
+    }
+
+    .container-main2{
+        grid-template-columns: repeat(1,1fr);
+    }
+/*Nav responsive*/
+    nav {
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: 40%;
+    }
+    
+    #buscar {
+        display: none;
+    }
+
+    #register {
+        display: none;
+    }
+
+
+
+
+/* buscador responsive */
+.search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+
+#search {
+    width: 80%;
+    color: #fff;
+    background: rgba(13, 14, 13, 0.9);
+    padding: 20px;
+    border: 3px solid #040d12;
+    outline: none;
+}
+
+
+
+    #logo {
+        width: 25%;
+    }
+
+}
+ 
+ /* celular */
+ @media (max-width: 640px) {
+    .grid-container-main{
+         grid-template-columns: repeat(1,1fr);
+    }
+    .container-main2{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+ /*Nav logo*/
+    #logo {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+
+    #logo {
+        width: 25%;
+    }
+}
