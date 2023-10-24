@@ -1,0 +1,68 @@
+
+/* Registro----------------------------------------------------------- */
+.caja-registro{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    margin: 5.6rem auto;
+    padding: 20px;
+    background: rgba(13, 14, 13, 0.7);
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border: 1px solid rgba(13, 14, 13, 0.7);
+    border-radius: 10px;
+}
+
+#title-registro{
+    color:#fff ;
+    text-align: center;
+}
+
+.label-input{   
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.label-input input{
+    display: flex;
+    width: 30vw;
+    margin: 0.5rem auto;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid rgba(13, 14, 13, 0.5);
+    background-color: #fff;
+    padding: 20px;
+    font-weight: bold;
+    outline: none;
+}
+
+#boton{
+    font-size: 18px;
+    width: 25vw;
+    height: 40px;
+    background-color: #007BFF;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+#boton:hover{
+    background-color: #0056b3;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+.register a {
+    color: #fff;
+}

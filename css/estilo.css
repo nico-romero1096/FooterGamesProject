@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat,  url("../imagenes/games.jpg") center top, #181A21;
+    font-family: Arial, sans-serif;
+}
+
+/* Esto es para que cada elemento de la lista quede una al lado de la otra */
+ul{
+    display: flex;
+}
+
+/* con list-style-type: none eliminamos los puntos que les agrega por defecto*/
+li{
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+/* Contenido de la etiqueta a (hipervinculos) */
+a{
+    display: flex;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #93B1A6;
+    cursor:pointer;
+    transition: 1s;
+}
+
+/* le damos sombreado al texto que contiene la etiqueta a */
+a:hover{
+    text-shadow:0 0 5px #00fff7;
+    color: #00fff7;
+    /* traslada el contenido de a 20px en el eje X y 10px en el eje Y */
+    /* transform: translate(20px, 10px);   */
+    /* transform:rotate(360deg); */
+}
+
+/* contenido flexbox, espaciado y centrado entre los elementos. que el nav ocupe el 15% */
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #040d12;
+    align-items: center;
+    height: 15vh;
+}
+
+/* logo que ocupa ancho del 25% y alto del 45% del nav */
+#logo{
+    width: 25%;
+    height: 45%;
+    margin-left: 20px;
+    border-radius: 3px;
+    cursor:pointer;
+    transition: 1s;
+    border-radius: 25px;
+}
+
+#logo:hover{
+    border: 1px solid #00fff7;
+    box-shadow: 0 0 20px #00fff7;
+}
+
+input{
+    border-radius: 10px;
+    font-family:cursive;
+    background-color: #183d3d;
+    width: 20vw;
+    height: 3vh;
+}
+
+#buscar {
+        color: #fff;
+        background-color: black;
+        width: 30vh;
+        padding: 20px;
+        border: 1px solid #040d12;
+}
+
+#imagen-login{
+    width: 5vh;
+    margin-left: 0.5rem;
+}
+
+#imagen-login:hover{
+    transform: scale(0.9);
+}
+
+
+.search-login {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+ /* ancho del 65% de la pantalla, margen arriba y abajo de 20px */
+ /* auto fit es para que se adapte al tamaño del navegador */
+/* minmax(n) cuan grande o chico queres que sea la imagen */
+
+ .grid-container-main{
+    width: 70%;
+    margin: 20px auto;
+    display: grid;
+    /* la unidad de medida fraccion ocupa el 100% de de la pantalla */
+    /* grid-template-columns: repeat(autofit, minmax(350px,1fr)); */
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: 300px 300px; */
+    gap: 20px;
+    padding: 40px;
+    background-color: rgba(31, 33, 34, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+ }
+
+ .card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: all 1s;
+    box-shadow: 2px 2px 4px black;
+}
+
+ .card:hover{
+    transform: scale(1.1);
+    opacity: 0.4;
+ }
+
+ .black{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: scale(1);
+    cursor: pointer;
+    transition: all 1s;
+    color: transparent;
+    justify-content: center;    
+ }
+
+ .black p{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif
+ }
+
+ .black:hover {
+    color: white;
+ }
+
+ /* nos aseguramos que se ajuste a su contenedor */
+ .imagen{
+    width: 100%;
+    height: 100%;
+ }
+
+ .imagen img{
+    width: 100%;
+    height: 100%;
+ }
+
+
+/* --------------------------------------------------------------------------------------------- */
+/* FOOTER que ocupa el 30% del navegador*/
+footer{
+    background-color: #040d12;
+    border: 1px solid transparent;
+}
+
+
+.line{
+    border-bottom: 1px solid #93B1A6;
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+/* repetimos 3 columnas de 1fr(33%) */
+/* y 3 filas  */
+.grid-container-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1fr 3fr 1fr; */
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.grid-items ul{
+    display: inline-block;
+}
+
+.grid-items li{
+    margin: 5px;
+}
+
+.grid-ancla img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.grid-ancla img:hover{
+    transform:translate(0px, -10px);
+}
+
+/* que el texto ocupe el ancho de todas las columnas */
+.grid-text{
+    color: #93B1A6;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 10px;
+}
+
+
+/* espacio entre los iconos */
+.grid-icon{
+    display: inline-block;
+    margin: 10px;
+
+}
+
+.titulos{
+    color: #93B1A6;
+}
+
+
+/* web responsive-------------------------------------------------------- */
+/* tablet */
+ @media (max-width: 768px) {
+   .grid-container-main{
+    grid-template-columns: repeat(2,1fr);
+   }
+}
+
+/* celular */
+@media (max-width: 640px) {
+    .grid-container-main{
+        grid-template-columns: repeat(1,1fr);
+}
+  }
+
+  
