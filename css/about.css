@@ -1,0 +1,54 @@
+/* Acerca de */
+
+body{
+    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat,  url("../imagenes/about.jpg") center top, #181A21;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 100vw;
+    background-color: rgba(31, 33, 34, 0.8);
+}
+
+.flex-text1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    text-align: center;
+}
+
+.flex-text2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+
+.parrafo{
+    width: 70%;
+    color: white;
+    font-size: 18px;
+    margin: 10px;
+}
+
+hr{
+    border: 4px solid #040d12;
+    border-radius: 3px;
+    width: 80vw;
+    margin: 10px;
+}
+
+
+
+main h1{
+    text-align: center;
+    color: #93B1A6;
+    font-weight: 800;
+}

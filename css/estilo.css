@@ -5,9 +5,12 @@
 }
 
 body{
-    background: radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat,  url("../imagenes/games.jpg") center top, #181A21;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #040d12, #183d3d, #5C8374);
+    font-family: Arial, Helvetica;
 }
+
+
+/*Header y nav*/
 
 /* Esto es para que cada elemento de la lista quede una al lado de la otra */
 ul{
@@ -17,7 +20,7 @@ ul{
 /* con list-style-type: none eliminamos los puntos que les agrega por defecto*/
 li{
     list-style-type: none;
-    margin-right: 20px;
+    margin: 0.5rem;
 }
 
 /* Contenido de la etiqueta a (hipervinculos) */
@@ -42,7 +45,7 @@ a:hover{
 /* contenido flexbox, espaciado y centrado entre los elementos. que el nav ocupe el 15% */
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #040d12;
     align-items: center;
     height: 15vh;
@@ -73,92 +76,157 @@ input{
 }
 
 #buscar {
-        color: #fff;
-        background-color: black;
-        width: 30vh;
-        padding: 20px;
-        border: 1px solid #040d12;
+    color: #fff;
+    background-color: black;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #040d12;
+    margin: 0.5rem;
 }
-
-#imagen-login{
-    width: 5vh;
-    margin-left: 0.5rem;
-}
-
 #imagen-login:hover{
     transform: scale(0.9);
 }
 
-
-.search-login {
-    display: flex;
-    align-items: center;
-    justify-self: center;
+#imagen-login{
+    width: 40px;
+    margin: 0.5rem;
 }
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+
+/* Main */
+
+.search {
+    display: none;
+}
+
  /* ancho del 65% de la pantalla, margen arriba y abajo de 20px */
  /* auto fit es para que se adapte al tamaño del navegador */
 /* minmax(n) cuan grande o chico queres que sea la imagen */
 
- .grid-container-main{
-    width: 70%;
-    margin: 20px auto;
+.grid-container-main{
+    width: 77%;
+    margin: 1.25rem auto;
     display: grid;
     /* la unidad de medida fraccion ocupa el 100% de de la pantalla */
     /* grid-template-columns: repeat(autofit, minmax(350px,1fr)); */
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     /* grid-template-rows: 300px 300px; */
     gap: 20px;
-    padding: 40px;
-    background-color: rgba(31, 33, 34, 0.8);
-    border: 1px solid #ddd;
-    border-radius: 10px;
  }
 
  .card{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 350px;
     transform: scale(1);
     transition: all 1s;
-    box-shadow: 2px 2px 4px black;
-}
+    box-shadow: 5px 5px 6px black;
+    background: linear-gradient(90deg, #000018, #011f1f, #0d2134);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+ }
 
  .card:hover{
-    transform: scale(1.1);
-    opacity: 0.4;
+    transform: scale(1.1);   
  }
 
  .black{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     display: flex;
+    flex-direction: column;
     transform: scale(1);
     cursor: pointer;
-    transition: all 1s;
-    color: transparent;
-    justify-content: center;    
- }
+    transition: all 0.5s;
+    color: transparent; 
+}
 
  .black p{
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 30px;
  }
 
  .black:hover {
     color: white;
+    background-color: rgba(10,10,10, 0.8);
  }
+
+ .black h1{
+   margin-top: 10px;
+   color: transparent;
+   transition: all 0.5s;
+   text-align: center;
+ }
+
+ .black:hover h1{
+   color: white;
+ }
+
 
  /* nos aseguramos que se ajuste a su contenedor */
  .imagen{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
  }
 
  .imagen img{
     width: 100%;
     height: 100%;
  }
+
+ section{
+   background: linear-gradient(90deg, #000018, #011f1f, #0d2134);
+ }
+
+ section h1{
+   display: flex;
+   color: #93B1A6;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   justify-content: center;
+ }
+
+ .container-main2{
+   width: 77%;
+   margin: 0.6rem auto;
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   column-gap: 20px;
+   row-gap: 20px;
+}
+
+.descripcion-iframe{
+   display: flex;
+   color: white;
+   font-size: 1.25rem;
+   flex-direction: column;
+}
+
+.descripcion-iframe p {
+    margin: 0.4rem;
+}
+
+.iframe{
+   width: 100%;
+}
+
+.iframe iframe{
+   width: 100%;
+}
+
+
 
 
 /* --------------------------------------------------------------------------------------------- */
@@ -195,7 +263,7 @@ footer{
 }
 
 .grid-items li{
-    margin: 5px;
+    margin: 0.31rem;
 }
 
 .grid-ancla img{
@@ -230,19 +298,85 @@ footer{
 }
 
 
+
+
+
 /* web responsive-------------------------------------------------------- */
 /* tablet */
- @media (max-width: 768px) {
-   .grid-container-main{
-    grid-template-columns: repeat(2,1fr);
-   }
-}
-
-/* celular */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .grid-container-main{
-        grid-template-columns: repeat(1,1fr);
-}
-  }
+     grid-template-columns: repeat(2,1fr);
+    }
 
-  
+    .container-main2{
+        grid-template-columns: repeat(1,1fr);
+    }
+/*Nav responsive*/
+    nav {
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: 40%;
+    }
+    
+    #buscar {
+        display: none;
+    }
+
+    #register {
+        display: none;
+    }
+
+
+
+
+/* buscador responsive */
+.search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+
+#search {
+    width: 80%;
+    color: #fff;
+    background: rgba(13, 14, 13, 0.9);
+    padding: 20px;
+    border: 3px solid #040d12;
+    outline: none;
+}
+
+
+
+    #logo {
+        width: 25%;
+    }
+
+}
+ 
+ /* celular */
+ @media (max-width: 640px) {
+    .grid-container-main{
+         grid-template-columns: repeat(1,1fr);
+    }
+    .container-main2{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+ /*Nav logo*/
+    #logo {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+
+    #logo {
+        width: 25%;
+    }
+}
