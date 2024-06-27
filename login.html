@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
+    <title>Footer Games</title>
+    <link rel="icon" href="./imagenes/footergames.ico">
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="stylesheet" href="./css/login.css">
+    <script src="validacion.js"></script>
 </head>
 <body>
 
@@ -16,16 +18,18 @@
         <div class="caja-registro">
             
 
-            <form action="">
+            <form onsubmit="return validar()">
                 <h1 id="title-registro">Iniciar sesión</h1>
                 <div class="label-input">
                     <label for="">Correo Electronico:</label>
                     <input type="email" name="mail" id="mail" placeholder=" ejemplo@gmail.com">
+                    <div id="validar_mail">&nbsp;</div>
                 </div>                
 
                 <div class="label-input">
                     <label for="">Contraseña:</label>
                     <input type="password" name="pass" id="pass" placeholder=" ingrese su contraseña">
+                    <div id="validar_pass">&nbsp;</div>
                 </div>
                 <div class="boton">
                 <input id="boton" type="submit" value="Login">
